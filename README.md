@@ -11,7 +11,6 @@
 ## Files
  * bin/check-num-recordings.rb
 
-
 ## Usage
 
 ## Installation
