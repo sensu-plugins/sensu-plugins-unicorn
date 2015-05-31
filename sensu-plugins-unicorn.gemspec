@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-unicorn'
   s.license                = 'MIT'
   s.metadata               = { 'development_status' => 'active',
-                               'maintainer'         => '',
+                               'maintainer'         => 'sensu-plugin',
                                'production_status'  => 'unstable - testing recommended',
                                'release_draft'      => 'false',
                                'release_prerelease' => 'false'
