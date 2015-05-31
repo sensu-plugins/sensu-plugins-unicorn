@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
   s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-unicorn'
   s.license                = 'MIT'
-  s.metadata               = { 'maintainer'         => '',
-                               'development_status' => 'active',
+  s.metadata               = { 'development_status' => 'active',
+                               'maintainer'         => '',
                                'production_status'  => 'unstable - testing recommended',
                                'release_draft'      => 'false',
                                'release_prerelease' => 'false'

@@ -8,6 +8,6 @@ module SensuPluginsUnicorn
     MINOR = 0
     PATCH = 1
 
-    VER_STRING = [MAJOR, MINOR, PATCH, 'alpha.1'].compact.join('.')
+    VER_STRING = [MAJOR, MINOR, PATCH].compact.join('.')
   end
 end
