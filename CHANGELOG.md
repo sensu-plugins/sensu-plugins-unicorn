@@ -6,7 +6,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ## [unreleased]
 - nothing
 
-## [0.0.3] - 2015-07-14
+## [0.0.4] - 2015-07-14
 ### Changed
 - general gem cleanup
 
