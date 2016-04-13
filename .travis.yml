@@ -24,7 +24,7 @@ deploy:
     secure: TY9BnFHi6T2yYtExEGmL4KSdGQQuWj2ZSVDnuv6z8fmMjarFYWU7gqdyVmlrmH0JQFRkFJrUIUULIX6bVH2B+qaEUc8DaBxbDonuI07+y/E4WEuch+YKL9VvAfoBmMxXFhSwL2JbOZswyRjv2RRzzRKiWe2LxA3Honrpe5xd75Q=
   gem: sensu-plugins-unicorn
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
