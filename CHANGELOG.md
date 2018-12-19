@@ -5,6 +5,10 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 
+## [1.0.2] - 2018-12-19
+### Added
+- Add support for unicorn metrics from tcp_listener_stats when given an address (@mattdoller)
+
 ## [1.0.1] - 2017-08-07
 ### Changed
 - Change `sensu-plugin` dependency to `~> 1.2` (@eheydrick)

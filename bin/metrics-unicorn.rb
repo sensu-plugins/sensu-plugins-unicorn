@@ -34,6 +34,11 @@ class UnicornMetrics < Sensu::Plugin::Metric::CLI::Graphite
          long: '--scheme SCHEME',
          default: "#{Socket.gethostname}.unicorn"
 
+  option :addr,
+         description: 'tcp address and port (e.g. 127.0.0.1:8080)',
+         short: '-a ADDRESS',
+         long: '--address ADDRESS'
+
   option :socket,
          description: 'Unicorn socket path',
          short: '-p SOCKET',
@@ -41,10 +46,20 @@ class UnicornMetrics < Sensu::Plugin::Metric::CLI::Graphite
          default: '/tmp/unicorn.sock'
 
   def run
-    stats = Raindrops::Linux.unix_listener_stats([config[:socket]])[config[:socket]]
-
     output "#{config[:scheme]}.active", stats.active
     output "#{config[:scheme]}.queued", stats.queued
     ok
+  end
+
+  private
+
+  def stats
+    @stats ||= begin
+      if config[:socket]
+        Raindrops::Linux.unix_listener_stats([config[:socket]])[config[:socket]]
+      elsif config[:addr]
+        Raindrops::Linux.tcp_listener_stats([config[:addr]])[config[:addr]]
+      end
+    end
   end
 end
