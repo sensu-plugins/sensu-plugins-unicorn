@@ -55,10 +55,10 @@ class UnicornMetrics < Sensu::Plugin::Metric::CLI::Graphite
 
   def stats
     @stats ||= begin
-      if config[:socket]
-        Raindrops::Linux.unix_listener_stats([config[:socket]])[config[:socket]]
-      elsif config[:addr]
+      if config[:addr]
         Raindrops::Linux.tcp_listener_stats([config[:addr]])[config[:addr]]
+      elsif config[:socket]
+        Raindrops::Linux.unix_listener_stats([config[:socket]])[config[:socket]]
       end
     end
   end
